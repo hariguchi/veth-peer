@@ -23,6 +23,7 @@ lo is not veth.
 $ sudo ip link del foo-bar
 $ veth-peer bar-foo
 bar-foo: Link not found
+$
 .fi
 .in
 .PP

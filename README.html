@@ -1,0 +1,72 @@
+Content-type: text/html; charset=UTF-8
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><HEAD><TITLE>Man page of VETH-PEER</TITLE>
+</HEAD><BODY>
+<H1>VETH-PEER</H1>
+Section: User Commands  (1)<BR><A HREF="#index">Index</A>
+<A HREF="/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+veth-peer - show the peer (pair) interface name of the
+specified veth interface
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNOPSIS</H2>
+
+<B>veth-peer</B>
+
+interface-name
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<I>veth-peer</I>
+
+shows the peer interface name of the specified veth interface.
+<A NAME="lbAE">&nbsp;</A>
+<H2>EXAMPLE</H2>
+
+<P>
+
+
+<PRE>
+$ sudo ip link add foo-bar type veth peer name bar-foo
+[sudo] password for XXX:
+$ veth-peer foor-bar
+bar-foo
+$ veth-peer xxx
+xxx: Link not found
+$ veth-peer lo
+lo is not veth.
+$ sudo ip link del foo-bar
+$ veth-peer bar-foo
+bar-foo: Link not found
+</PRE>
+
+
+<P>
+
+<A NAME="lbAF">&nbsp;</A>
+<H2>AUTHOR</H2>
+
+Yoichi Hariguchi (<A HREF="https://github.com/hariguchi/veth-peer)">https://github.com/hariguchi/veth-peer)</A>
+<P>
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNOPSIS</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">EXAMPLE</A><DD>
+<DT><A HREF="#lbAF">AUTHOR</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+Time: 04:23:34 GMT, April 30, 2018
+</BODY>
+</HTML>

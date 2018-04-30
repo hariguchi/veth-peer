@@ -1,0 +1,31 @@
+.TH VETH-PEER 1
+.SH NAME
+veth-peer \- show the peer (pair) interface name of the
+specified veth interface
+.SH SYNOPSIS
+.B veth-peer
+interface-name
+.SH DESCRIPTION
+.I veth-peer
+shows the peer interface name of the specified veth interface.
+.SH EXAMPLE
+.PP
+.in +4n
+.nf
+$ sudo ip link add foo-bar type veth peer name bar-foo
+[sudo] password for XXX:
+$ veth-peer foor-bar
+bar-foo
+$ veth-peer xxx
+xxx: Link not found
+$ veth-peer lo
+lo is not veth.
+$ sudo ip link del foo-bar
+$ veth-peer bar-foo
+bar-foo: Link not found
+.fi
+.in
+.PP
+.SH AUTHOR
+Yoichi Hariguchi (https://github.com/hariguchi/veth-peer)
+
